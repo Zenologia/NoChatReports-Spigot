@@ -1,11 +1,11 @@
 plugins {
     id 'java'
-    id 'io.github.goooler.shadow' version '8.1.7'
+    id 'com.gradleup.shadow' version '9.4.1'
 }
 
 allprojects {
     group = 'com.tcoded'
-    version = '2.7.5'
+    version = '2.7.6'
 
     repositories {
         mavenCentral()
@@ -41,7 +41,7 @@ allprojects {
 subprojects {
 
     apply plugin: 'java'
-    apply plugin: 'io.github.goooler.shadow'
+    apply plugin: 'com.gradleup.shadow'
 
     group = rootProject.group + '.nochatreports'
 
@@ -89,6 +89,7 @@ dependencies {
     implementation project(path: ":nms:v1_21_8", configuration: "reobf")
     implementation project(path: ":nms:v1_21_9", configuration: "reobf")
     implementation project(path: ":nms:v1_21_11", configuration: "shadow")
+    implementation project(path: ":nms:v26_1_2", configuration: "shadow")
 
 //    implementation "com.github.retrooper:packetevents-spigot:2.7.0-SNAPSHOT"
 }
